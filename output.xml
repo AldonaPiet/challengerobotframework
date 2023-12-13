@@ -1,125 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.9.12 on win32)" generated="20231206 16:19:28.670" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.9.12 on win32)" generated="20231213 20:04:11.792" rpa="false" schemaversion="4">
 <suite id="s1" name="Challengerobotframework" source="C:\Users\Aldona\Documents\GitHub\challenges\challengerobotframework">
 <suite id="s1-s1" name="Test Update Player Wrong Data Rf" source="C:\Users\Aldona\Documents\GitHub\challenges\challengerobotframework\test_update_player_wrong_data_rf.robot">
-<test id="s1-s1-t1" name="Updating the last Added player form" line="34">
+<test id="s1-s1-t1" name="Updating the last Added player form" line="39">
 <kw name="Open login page">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231206 16:19:29.009" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
-<status status="PASS" starttime="20231206 16:19:29.008" endtime="20231206 16:19:32.364"/>
+<msg timestamp="20231213 20:04:12.131" level="INFO">Opening browser 'Chrome' to base url 'https://dareit.futbolkolektyw.pl/en'.</msg>
+<status status="PASS" starttime="20231213 20:04:12.130" endtime="20231213 20:04:14.902"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231206 16:19:32.365" endtime="20231206 16:19:32.658"/>
+<status status="PASS" starttime="20231213 20:04:14.902" endtime="20231213 20:04:15.100"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:29.008" endtime="20231206 16:19:32.659"/>
+<status status="PASS" starttime="20231213 20:04:12.130" endtime="20231213 20:04:15.100"/>
 </kw>
 <kw name="Type in email">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${EMAILINPUT}</arg>
 <arg>${E-MAIL_USER}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:32.662" level="INFO">Typing text 'user06@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
-<status status="PASS" starttime="20231206 16:19:32.660" endtime="20231206 16:19:33.157"/>
+<msg timestamp="20231213 20:04:15.104" level="INFO">Typing text 'user06@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231213 20:04:15.103" endtime="20231213 20:04:15.340"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:32.659" endtime="20231206 16:19:33.158"/>
+<status status="PASS" starttime="20231213 20:04:15.101" endtime="20231213 20:04:15.340"/>
 </kw>
 <kw name="Type in password">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PASSWORDINPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:33.161" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
-<status status="PASS" starttime="20231206 16:19:33.159" endtime="20231206 16:19:33.370"/>
+<msg timestamp="20231213 20:04:15.342" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231213 20:04:15.341" endtime="20231213 20:04:15.459"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:33.158" endtime="20231206 16:19:33.370"/>
+<status status="PASS" starttime="20231213 20:04:15.340" endtime="20231213 20:04:15.459"/>
 </kw>
 <kw name="Submit button">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SIGNINBUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:33.371" level="INFO">Clicking element 'xpath=//span[@class='MuiButton-label']'.</msg>
-<status status="PASS" starttime="20231206 16:19:33.371" endtime="20231206 16:19:33.439"/>
+<msg timestamp="20231213 20:04:15.461" level="INFO">Clicking element 'xpath=//span[@class='MuiButton-label']'.</msg>
+<status status="PASS" starttime="20231213 20:04:15.460" endtime="20231213 20:04:15.517"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${PAGELOGO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231206 16:19:33.439" endtime="20231206 16:19:34.612"/>
+<status status="PASS" starttime="20231213 20:04:15.517" endtime="20231213 20:04:16.510"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:33.370" endtime="20231206 16:19:34.612"/>
+<status status="PASS" starttime="20231213 20:04:15.460" endtime="20231213 20:04:16.510"/>
 </kw>
 <kw name="Click on the Last created player button">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LAST_CREATED_PLAYER_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:34.613" level="INFO">Clicking element '//*/div[3]/div/div/a[1]/button'.</msg>
-<status status="PASS" starttime="20231206 16:19:34.613" endtime="20231206 16:19:34.692"/>
+<msg timestamp="20231213 20:04:16.512" level="INFO">Clicking element '//*/div[3]/div/div/a[1]/button'.</msg>
+<status status="PASS" starttime="20231213 20:04:16.511" endtime="20231213 20:04:16.580"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${FORM_HEADER}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231206 16:19:34.692" endtime="20231206 16:19:35.075"/>
+<status status="PASS" starttime="20231213 20:04:16.580" endtime="20231213 20:04:16.837"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:34.612" endtime="20231206 16:19:35.075"/>
+<status status="PASS" starttime="20231213 20:04:16.511" endtime="20231213 20:04:16.837"/>
 </kw>
 <kw name="Fill in the form and submit">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${PHONE_FIELD_XPATH}</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231213 20:04:16.839" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to //*[@name='phone'] element.</msg>
+<msg timestamp="20231213 20:04:17.149" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231213 20:04:17.149" level="INFO">Sending key A</msg>
+<msg timestamp="20231213 20:04:17.149" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20231213 20:04:17.149" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231213 20:04:17.149" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20231213 20:04:16.838" endtime="20231213 20:04:17.168"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PHONE_FIELD_XPATH}</arg>
+<arg>${PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 20:04:17.169" level="INFO">Typing text ''#$%^&amp;*()(*&amp;^%$%^&amp;*'' into text field '//*[@name='phone']'.</msg>
+<status status="PASS" starttime="20231213 20:04:17.168" endtime="20231213 20:04:17.352"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>wrong_phone.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 20:04:17.453" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="wrong_phone.png"&gt;&lt;img src="wrong_phone.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 20:04:17.352" endtime="20231213 20:04:17.453"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${HEIGHT_VALUE_FIELD_XPATH}</arg>
+<arg>CTRL+A+DELETE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231213 20:04:17.455" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to //*[@name='height'] element.</msg>
+<msg timestamp="20231213 20:04:17.757" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231213 20:04:17.759" level="INFO">Sending key A</msg>
+<msg timestamp="20231213 20:04:17.759" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20231213 20:04:17.760" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231213 20:04:17.760" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20231213 20:04:17.453" endtime="20231213 20:04:17.781"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${HEIGHT_VALUE_FIELD_XPATH}</arg>
+<arg>${HEIGHT_VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 20:04:17.782" level="INFO">Typing text 'aaaaaaaa' into text field '//*[@name='height']'.</msg>
+<status status="PASS" starttime="20231213 20:04:17.781" endtime="20231213 20:04:17.882"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>wrong_height.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 20:04:18.042" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="wrong_height.png"&gt;&lt;img src="wrong_height.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 20:04:17.882" endtime="20231213 20:04:18.042"/>
+</kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${BIRTH_DATE_FIELD_XPATH}</arg>
 <arg>CTRL+A+DELETE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20231206 16:19:35.078" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to //*[@name='age'] element.</msg>
-<msg timestamp="20231206 16:19:35.404" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20231206 16:19:35.404" level="INFO">Sending key A</msg>
-<msg timestamp="20231206 16:19:35.404" level="INFO">Pressing special key DELETE down.</msg>
-<msg timestamp="20231206 16:19:35.404" level="INFO">Releasing special key CONTROL.</msg>
-<msg timestamp="20231206 16:19:35.404" level="INFO">Releasing special key DELETE.</msg>
-<status status="PASS" starttime="20231206 16:19:35.076" endtime="20231206 16:19:35.430"/>
+<msg timestamp="20231213 20:04:18.044" level="INFO">Sending key(s) ('CTRL+A+DELETE',) to //*[@name='age'] element.</msg>
+<msg timestamp="20231213 20:04:18.427" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20231213 20:04:18.428" level="INFO">Sending key A</msg>
+<msg timestamp="20231213 20:04:18.428" level="INFO">Pressing special key DELETE down.</msg>
+<msg timestamp="20231213 20:04:18.428" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20231213 20:04:18.428" level="INFO">Releasing special key DELETE.</msg>
+<status status="PASS" starttime="20231213 20:04:18.042" endtime="20231213 20:04:18.452"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${BIRTH_DATE_FIELD_XPATH}</arg>
 <arg>${BIRTH_DATE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:35.432" level="INFO">Typing text '10000000000' into text field '//*[@name='age']'.</msg>
-<status status="PASS" starttime="20231206 16:19:35.430" endtime="20231206 16:19:35.548"/>
+<msg timestamp="20231213 20:04:18.453" level="INFO">Typing text '10000000000' into text field '//*[@name='age']'.</msg>
+<status status="PASS" starttime="20231213 20:04:18.453" endtime="20231213 20:04:18.562"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>wrong_birth.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 20:04:18.765" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="wrong_birth.png"&gt;&lt;img src="wrong_birth.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 20:04:18.563" endtime="20231213 20:04:18.765"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PREVIOUS_CLUB_XPATH}</arg>
+<arg>${PREVIOUS_CLUB}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231213 20:04:18.766" level="INFO">Typing text 'OPlalkknsjbdh' into text field 'xpath=//*[@name='prevClub']'.</msg>
+<status status="PASS" starttime="20231213 20:04:18.765" endtime="20231213 20:04:18.945"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SUBMIT_BUTTON_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231206 16:19:35.549" level="INFO">Clicking element '//*[@type='submit']'.</msg>
-<status status="PASS" starttime="20231206 16:19:35.548" endtime="20231206 16:19:35.624"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
-<arg>${MAIN_PAGE_XPATH}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20231206 16:19:35.624" endtime="20231206 16:19:35.665"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>7s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231206 16:19:42.674" level="INFO">Slept 7 seconds</msg>
-<status status="PASS" starttime="20231206 16:19:35.665" endtime="20231206 16:19:42.674"/>
+<msg timestamp="20231213 20:04:18.946" level="INFO">Clicking element '//*[@type='submit']'.</msg>
+<status status="PASS" starttime="20231213 20:04:18.946" endtime="20231213 20:04:19.030"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<arg>picture.png</arg>
+<arg>to_be_saved.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231206 16:19:42.864" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="picture.png"&gt;&lt;img src="picture.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231206 16:19:42.674" endtime="20231206 16:19:42.864"/>
+<msg timestamp="20231213 20:04:19.254" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="to_be_saved.png"&gt;&lt;img src="to_be_saved.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 20:04:19.030" endtime="20231213 20:04:19.254"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:35.075" endtime="20231206 16:19:42.864"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAIN_PAGE_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 20:04:19.255" level="INFO">Clicking element '//*/ul[1]/div[1]'.</msg>
+<status status="PASS" starttime="20231213 20:04:19.254" endtime="20231213 20:04:19.327"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LAST_UPDATED_PLAYER_BUTTON_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 20:04:19.327" endtime="20231213 20:04:19.566"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LAST_UPDATED_PLAYER_BUTTON_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231213 20:04:19.567" level="INFO">Clicking element 'xpath=//*/a[2]/button'.</msg>
+<status status="PASS" starttime="20231213 20:04:19.566" endtime="20231213 20:04:19.633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_FIELD_PLAYER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231213 20:04:19.634" endtime="20231213 20:04:19.907"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>check_wrong_data.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231213 20:04:20.164" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="check_wrong_data.png"&gt;&lt;img src="check_wrong_data.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231213 20:04:19.908" endtime="20231213 20:04:20.165"/>
+</kw>
+<status status="PASS" starttime="20231213 20:04:16.838" endtime="20231213 20:04:20.165"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231206 16:19:42.865" endtime="20231206 16:19:45.181"/>
+<status status="PASS" starttime="20231213 20:04:20.165" endtime="20231213 20:04:22.444"/>
 </kw>
-<status status="PASS" starttime="20231206 16:19:29.007" endtime="20231206 16:19:45.182"/>
+<status status="PASS" starttime="20231213 20:04:12.129" endtime="20231213 20:04:22.445"/>
 </test>
 <doc>Suite descryption #automated tests for scouts website</doc>
-<status status="PASS" starttime="20231206 16:19:28.706" endtime="20231206 16:19:45.187"/>
+<status status="PASS" starttime="20231213 20:04:11.827" endtime="20231213 20:04:22.447"/>
 </suite>
-<status status="PASS" starttime="20231206 16:19:28.672" endtime="20231206 16:19:45.194"/>
+<status status="PASS" starttime="20231213 20:04:11.794" endtime="20231213 20:04:22.450"/>
 </suite>
 <statistics>
 <total>

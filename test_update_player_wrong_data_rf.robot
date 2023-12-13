@@ -2,7 +2,9 @@
 Library    SeleniumLibrary
 Documentation       Suite descryption #automated tests for scouts website
 *** Variables ***
-${LOGIN URL}        https://scouts-test.futbolkolektyw.pl/en
+${LOGIN URL}        https://dareit.futbolkolektyw.pl/en
+#${LOGIN URL}        https://scouts-test.futbolkolektyw.pl/en
+
 ${BROWSER}      Chrome
 # xPath
 ${SIGNINBUTTON}     xpath=//span[@class='MuiButton-label']
@@ -10,6 +12,7 @@ ${EMAILINPUT}       xpath=//*[@id='login']
 ${PASSWORDINPUT}        xpath=//*[@id='password']
 ${PAGELOGO}     xpath=//*/header/div/h6
 ${LAST_CREATED_PLAYER_BUTTON_XPATH}		//*/div[3]/div/div/a[1]/button
+${LAST_UPDATED_PLAYER_BUTTON_XPATH}    xpath=//*/a[2]/button
 ${FORM_HEADER}    //*/form/div[1]/div/span
 
 ${MAIN_PAGE_XPATH}    //*/ul[1]/div[1]
@@ -20,6 +23,7 @@ ${HEIGHT_VALUE_FIELD_XPATH}		//*[@name='height']
 ${BIRTH_DATE_FIELD_XPATH}		//*[@name='age']
 
 ${SUBMIT_BUTTON_XPATH}		//*[@type='submit']
+${PREVIOUS_CLUB_XPATH}    xpath=//*[@name='prevClub']
 
 # data
 ${E-MAIL_USER}		user06@getnada.com
@@ -29,6 +33,7 @@ ${E-MAIL_PLAYER}		APpppppgmailcom
 ${PHONE}		'#$%^&*()(*&^%$%^&*'
 ${HEIGHT_VALUE}		aaaaaaaa
 ${BIRTH_DATE}		10000000000
+${PREVIOUS_CLUB}    OPlalkknsjbdh
 
 *** Test Cases ***
 Updating the last Added player form
@@ -56,20 +61,28 @@ Click on the Last created player button
     wait until element is visible    ${FORM_HEADER}
 
 Fill in the form and submit
-    Clear Element Text    ${EMAIL_FIELD_PLAYER_XPATH} # does not work
-    Press Keys    ${EMAIL_FIELD_PLAYER_XPATH}    CTRL+A+DELETE
-    Input Text    ${EMAIL_FIELD_PLAYER_XPATH}    ${E-MAIL_PLAYER} # player can be saved
+#    Press Keys    ${EMAIL_FIELD_PLAYER_XPATH}    CTRL+A+DELETE
+#    Input Text    ${EMAIL_FIELD_PLAYER_XPATH}    ${E-MAIL_PLAYER}
+#    Capture Page Screenshot    wrong_e-mail.png
 
     Press Keys    ${PHONE_FIELD_XPATH}    CTRL+A+DELETE
-    Input Text    ${PHONE_FIELD_XPATH}    ${PHONE} # player can be saved
+    Input Text    ${PHONE_FIELD_XPATH}    ${PHONE}
+    Capture Page Screenshot    wrong_phone.png
 
     Press Keys    ${HEIGHT_VALUE_FIELD_XPATH}    CTRL+A+DELETE
-    Input Text    ${HEIGHT_VALUE_FIELD_XPATH}    ${HEIGHT_VALUE} # player can be saved but with 'e' value instead of letters
-
+    Input Text    ${HEIGHT_VALUE_FIELD_XPATH}    ${HEIGHT_VALUE}
+    Capture Page Screenshot    wrong_height.png
+#
     Press Keys    ${BIRTH_DATE_FIELD_XPATH}    CTRL+A+DELETE
-    Input Text    ${BIRTH_DATE_FIELD_XPATH}    ${BIRTH_DATE} # player can be saved
+    Input Text    ${BIRTH_DATE_FIELD_XPATH}    ${BIRTH_DATE}
+    Capture Page Screenshot    wrong_birth.png
 
+    Input Text    ${PREVIOUS_CLUB_XPATH}     ${PREVIOUS_CLUB}
     Click Element    ${SUBMIT_BUTTON_XPATH}
-    Wait Until Element Is Enabled    ${MAIN_PAGE_XPATH}
-    Sleep    7s
-    Capture Page Screenshot    picture.png
+    Capture Page Screenshot    to_be_saved.png
+
+    Click Element    ${MAIN_PAGE_XPATH}
+    Wait Until Element Is Visible    ${LAST_UPDATED_PLAYER_BUTTON_XPATH}
+    Click Element    ${LAST_UPDATED_PLAYER_BUTTON_XPATH}
+    Wait Until Element Is Visible    ${EMAIL_FIELD_PLAYER_XPATH}
+    Capture Page Screenshot    check_wrong_data.png
