@@ -3,4 +3,9 @@
 
 In this challenge I familiarize myself with Robot Framework.
 
-First step: installing on my desktop: pip install robotframework in cmd
+* installing on my desktop: pip install robotframework in cmd
+* familiarize myself with Smoke Tests
+* familiarize myself with Suite Test
+* familiarize myself with new framework
+* tests previously written in Python translate to RF
+* generate automatic reports
