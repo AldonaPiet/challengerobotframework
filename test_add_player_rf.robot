@@ -52,9 +52,9 @@ ${PREVIOUS_CLUB_XPATH}    //*[@name='prevClub']
 
 # data
 
-${E-MAIL_USER}		user06@getnada.com
+${EMAIL_USER}		user06@getnada.com
 ${PASSWORD}		Test-1234
-${E-MAIL_PLAYER}		APkhuhyugb@gmail.com
+${EMAIL_PLAYER}		APkhuhyugb@gmail.com
 ${NAME}    Angelinia
 ${SURNAME}    Pomelinio
 ${PHONE}		12345623456
@@ -74,6 +74,7 @@ ${LACZY_NAS_PILKA}		APaleocochodzi
 ${MINUT_90}		APaleocochodzistill
 #${FB}		none
 ${YOUTUBE}		https://www.youtube.com/watch?v
+${EXPECTED_TITLE_ADD_PLAYER}        Add player
 
 
 *** Test Cases ***
@@ -93,7 +94,7 @@ Open login page
     Maximize Browser Window
 #    Title Should Be     Scouts panel - sign in #Asserty wyłączone na production, zostawione tylko na końcu o ile potrzebne
 Type in email
-    Input Text      ${EMAILINPUT}   ${E-MAIL_USER}
+    Input Text      ${EMAILINPUT}   ${EMAIL_USER}
 Type in password
     Input Text       ${PASSWORDINPUT}   ${PASSWORD}
 Submit button
@@ -102,14 +103,14 @@ Submit button
 Click on the Add player button
     Click Element    ${ADD_PLAYER_BUTTON_XPATH}
     Wait until element is visible    ${FORM_HEADER}
-    Title Should Be    Add player
+    Title Should Be    ${EXPECTED_TITLE_ADD_PLAYER}
 Fill in the form and submit
     Click Element    ${DISTRICT_OPTION_BUTTON_XPATH}
     Wait Until Element Is Visible    ${DISTRICT_CHOICE_LOWER_SILESIA_XPATH}
     Wait Until Element Is Enabled    ${DISTRICT_CHOICE_LOWER_SILESIA_XPATH}
     Click Element    ${DISTRICT_CHOICE_LOWER_SILESIA_XPATH}
     Input Text    ${HEIGHT_VALUE_FIELD_XPATH}    ${HEIGHT_VALUE}
-    Input Text    ${EMAIL_FIELD_PLAYER_XPATH}    ${E-MAIL_PLAYER}
+    Input Text    ${EMAIL_FIELD_PLAYER_XPATH}    ${EMAIL_PLAYER}
     Input Text    ${NAME_FIELD_XPATH}    ${NAME}
     Input Text    ${SURNAME_FIELD_XPATH}    ${SURNAME}
     Input Text    ${PHONE_FIELD_XPATH}    ${PHONE}

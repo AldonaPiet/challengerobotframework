@@ -15,7 +15,7 @@ ${ADD_PLAYER_POLISH_BUTTON_XPATH}    xpath=//*[text()='Dodaj gracza']
 ${ADD_PALAYER_ENGLISH_BUTTON_XPATH}    xpath=//*[text()='Add player']
 ${LAST_UPDATED_PLAYER_BUTTON_XPATH}     xpath=//*/a[2]/button
 #data
-${E-MAIL_USER}		user06@getnada.com
+${EMAIL_USER}		user06@getnada.com
 ${PASSWORD}        Test-1234
 *** Test Cases ***
 Login to the system
@@ -33,7 +33,7 @@ Open login page
 # asserty wyłączone na production, zostawione tylko na końcu o ile potrzebne
 #    Title Should Be     Scouts panel - sign in
 Type in email
-    Input Text      ${EMAILINPUT}   ${E-MAIL_USER}
+    Input Text      ${EMAILINPUT}   ${EMAIL_USER}
 Type in password
     Input Text       ${PASSWORDINPUT}   ${PASSWORD}
 Click on the Signin button

@@ -12,8 +12,8 @@ ${PASSWORDINPUT}        xpath=//*[@id='password']
 ${PAGELOGO}      xpath=//*/header/div/h6
 ${invalid_password_or_id}    xpath=//*/div[3]/span
 #data
-${E-MAIL_USER}		user06@getnada.com
-${PASSWORD}        hgsgst-1234
+${EMAIL_USER}		user06@getnada.com
+${PASSWORD_WRONG}        hgsgst-1234
 
 
 
@@ -33,9 +33,9 @@ Open login page
 # asserty wyłączone na production, zostawione tylko na końcu o ile potrzebne
 #    Title Should Be     Scouts panel - sign in
 Type in email
-    Input Text      ${EMAILINPUT}   ${E-MAIL_USER}
+    Input Text      ${EMAILINPUT}   ${EMAIL_USER}
 Type in wrong password
-    Input Text       ${PASSWORDINPUT}   ${PASSWORD}
+    Input Text       ${PASSWORDINPUT}   ${PASSWORD_WRONG}
 Click on the Signin button
     Click Element   ${SIGNINBUTTON}
     Wait Until Element Is Visible    ${invalid_password_or_id}

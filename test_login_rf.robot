@@ -8,6 +8,14 @@ ${SIGNINBUTTON}     xpath=//span[@class='MuiButton-label']
 ${EMAILINPUT}       xpath=//*[@id='login']
 ${PASSWORDINPUT}        xpath=//*[@id='password']
 ${PAGELOGO}     xpath=//*/header/div/h6
+
+${EXPECTED_TITLE_SIGN_IN}     Scouts panel - sign in
+${EMAIL_USER}        user06@getnada.com
+${PASSWORD_USER}        Test-1234
+${PASSWORD_WRONG}        hgsgst-1234
+${EXPECTED_TITLE_DASHBOARD}        Scouts panel
+
+
 *** Test Cases ***
 Login to the system
     Open login page
@@ -19,15 +27,19 @@ Login to the system
 *** Keywords ***
 Open login page
     Open Browser     ${LOGIN URL}    ${BROWSER}
-    Title Should Be     Scouts panel - sign in
+    Title Should Be     ${EXPECTED_TITLE_SIGN_IN}
 Type in email
-    Input Text      ${EMAILINPUT}   user06@getnada.com
+    Input Text      ${EMAILINPUT}   ${EMAIL_USER}
 Type in password
-    Input Text       ${PASSWORDINPUT}   Test-1234
+    Input Text       ${PASSWORDINPUT}   ${PASSWORD_USER}
 Click on the Submit button
-    Click Element   xpath=//*[(text()= 'Sign in')]
+    Click Element  ${SIGNINBUTTON}
 Assert dashboard
     wait until element is visible    ${PAGELOGO}
-    title should be     Scouts panel
-    Capture Page Screenshot     alert.png    
+    title should be     ${EXPECTED_TITLE_DASHBOARD}
+    Capture Page Screenshot     alert.png
+
+
+
+
 
