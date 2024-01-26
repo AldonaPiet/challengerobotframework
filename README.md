@@ -7,5 +7,5 @@ In this challenge I familiarize myself with Robot Framework.
 * familiarize myself with Smoke Tests
 * familiarize myself with Suite Test
 * familiarize myself with new framework
-* tests previously written in Python translate to RF
+* tests previously written in Python ( <a href="https://github.com/AldonaPiet/challenge_portfolio_aldona" >Portfolio</a> ) translate to RF 
 * generate automatic reports
